@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import { app, appReady } from '../server';
+import { app, appReady } from '../server.ts';
 
 export default async function handler(req: Request, res: Response) {
   try {
