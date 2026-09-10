@@ -25,9 +25,10 @@ import { FeedbackDatasetService } from './server/feedbackDatasetService';
 import { BatchQueueService } from './server/batchQueueService';
 import { Medicine, MedicineScheduleItem, Prescription, SupportedLanguage } from './src/types';
 
+const app = express();
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+
 async function startServer() {
-  const app = express();
-  const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
   // Enable CORS for localhost frontend development and cross-origin access
   app.use(
@@ -1079,22 +1080,43 @@ async function startServer() {
   // ----------------------------------------------------
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: {
+        middlewareMode: true,
+      },
       appType: 'spa',
     });
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), 'dist');
     app.use(express.static(distPath));
-    app.get('*', (req: Request, res: Response) => {
+    app.get('*', (req: Request, res: Response, next) => {
+      if (req.path.startsWith('/api/')) {
+        return next();
+      }
       res.sendFile(path.join(distPath, 'index.html'));
     });
   }
-
-  app.listen(PORT, '0.0.0.0', () => {
-    logStartupStatus();
-    console.log(`Medical Prescription Simplifier server running on http://0.0.0.0:${PORT}`);
-  });
 }
 
-startServer();
+// Initialize the Express application so Vercel can import and use it.
+// The promise ensures all middleware and API routes are registered before
+// a request is handled.
+const appReady = startServer();
+
+export { app, appReady };
+
+if (!process.env.VERCEL) {
+  appReady
+    .then(() => {
+      app.listen(PORT, '0.0.0.0', () => {
+        logStartupStatus();
+        console.log(
+          `Medical Prescription Simplifier server running on http://0.0.0.0:${PORT}`
+        );
+      });
+    })
+    .catch((error) => {
+      console.error('Failed to start Medical Prescription Simplifier server:', error);
+      process.exit(1);
+    });
+}
