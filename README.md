@@ -86,6 +86,9 @@ Clone the repository:
 
 
 git clone https://github.com/vootlarakeshreddy123-debug/medical-prescription-simplifier.git
+
+
+
 Navigate to the project:
 
 cd medical-prescription-simplifier
@@ -100,8 +103,10 @@ Run the application:
 
 npm run dev
 
-Live Demo
 
+🌍Live Demo
+
+ medical-prescription-simplifier.vercel.app
 
 GitHub Repository
 
