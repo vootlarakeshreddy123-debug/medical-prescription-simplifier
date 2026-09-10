@@ -1,12 +1,10 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+import type { Request, Response } from 'express';
 import { app, appReady } from '../server';
 
-export default async function handler(
-  req: VercelRequest,
-  res: VercelResponse
-) {
+export default async function handler(req: Request, res: Response) {
   try {
     await appReady;
+
     app(req, res);
   } catch (error) {
     console.error('Vercel API initialization error:', error);
@@ -22,4 +20,3 @@ export default async function handler(
     }
   }
 }
-
