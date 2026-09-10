@@ -1,0 +1,6 @@
+{
+  "name": "Medical Prescription Simplifier",
+  "description": "AI-powered healthcare assistant that transforms complicated medical prescriptions, abbreviations, instructions, and safety warnings into clear, patient-friendly guidance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

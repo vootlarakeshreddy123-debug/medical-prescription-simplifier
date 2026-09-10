@@ -1,0 +1,656 @@
+[
+  {
+    "id": "FBL_TEST-008_1788602657745",
+    "timestamp": "2026-09-05T10:04:17.745Z",
+    "testId": "TEST-008",
+    "imageName": "prescription_008_cardiac.jpg",
+    "imageUrl": "/api/testing/cases/TEST-008/image",
+    "imageDifficulty": "Medium Handwritten",
+    "aiExtractedResult": {
+      "medicines": [
+        {
+          "name": "Ecosprin (Aspirin (Low-Dose / Enteric Coated))",
+          "dose": "75mg",
+          "frequency": "OD",
+          "timing": "morning",
+          "duration": "30 days",
+          "instructions": "after lunch"
+        },
+        {
+          "name": "Rosuvas (Rosuvastatin)",
+          "dose": "10mg",
+          "frequency": "HS",
+          "timing": "bedtime",
+          "duration": "30 days",
+          "instructions": "bedtime"
+        }
+      ],
+      "doctorName": "Dr. Sarah Jenkins, MD",
+      "clinicName": "ST. JUDE WELLNESS"
+    },
+    "humanCorrectedResult": {
+      "medicines": [
+        {
+          "id": "exp_008_1",
+          "name": "Ecosprin (Aspirin)",
+          "dose": "75 mg",
+          "frequency": "Once daily (OD)",
+          "timing": "After lunch",
+          "duration": "30 days"
+        },
+        {
+          "id": "exp_008_2",
+          "name": "Rosuvas (Rosuvastatin)",
+          "dose": "10 mg",
+          "frequency": "Once daily (HS)",
+          "timing": "Bedtime",
+          "duration": "30 days"
+        }
+      ],
+      "reviewerNotes": "Queued for evaluation."
+    },
+    "groundTruth": [
+      {
+        "id": "exp_008_1",
+        "name": "Ecosprin (Aspirin)",
+        "dose": "75 mg",
+        "frequency": "Once daily (OD)",
+        "timing": "After lunch",
+        "duration": "30 days"
+      },
+      {
+        "id": "exp_008_2",
+        "name": "Rosuvas (Rosuvastatin)",
+        "dose": "10 mg",
+        "frequency": "Once daily (HS)",
+        "timing": "Bedtime",
+        "duration": "30 days"
+      }
+    ],
+    "errorTypes": [
+      "Incorrect timing",
+      "Incorrect frequency"
+    ],
+    "reviewDecision": "Confirmed AI Result",
+    "reviewStatus": "Passed",
+    "evaluationState": "EVALUATED",
+    "notes": "Queued for evaluation."
+  },
+  {
+    "id": "FBL_TEST-007_1788602657745",
+    "timestamp": "2026-09-05T10:04:17.745Z",
+    "testId": "TEST-007",
+    "imageName": "prescription_007_ortho.jpg",
+    "imageUrl": "/api/testing/cases/TEST-007/image",
+    "imageDifficulty": "Clear Printed",
+    "aiExtractedResult": {
+      "medicines": [
+        {
+          "name": "Zerodol (Aceclofenac)",
+          "dose": "100/325 mg",
+          "frequency": "Twice daily",
+          "timing": "morning, evening",
+          "duration": "unspecified",
+          "instructions": "none"
+        },
+        {
+          "name": "Rabicip (Rabeprazole)",
+          "dose": "20 mg",
+          "frequency": "Once daily (OD)",
+          "timing": "morning",
+          "duration": "5 days",
+          "instructions": "Before food"
+        }
+      ],
+      "doctorName": "Dr. M. S. Gill",
+      "clinicName": "APOLLO JOINT & BONE CARE"
+    },
+    "humanCorrectedResult": {
+      "medicines": [
+        {
+          "id": "exp_007_1",
+          "name": "Aceclo-Plus (Aceclofenac + Paracetamol)",
+          "dose": "100/325 mg",
+          "frequency": "Twice daily (BD)",
+          "timing": "After food",
+          "duration": "5 days"
+        },
+        {
+          "id": "exp_007_2",
+          "name": "Rabicip (Rabeprazole)",
+          "dose": "20 mg",
+          "frequency": "Once daily (OD)",
+          "timing": "Before food",
+          "duration": "5 days"
+        }
+      ],
+      "reviewerNotes": "Specimen queued for automated test run."
+    },
+    "groundTruth": [
+      {
+        "id": "exp_007_1",
+        "name": "Aceclo-Plus (Aceclofenac + Paracetamol)",
+        "dose": "100/325 mg",
+        "frequency": "Twice daily (BD)",
+        "timing": "After food",
+        "duration": "5 days"
+      },
+      {
+        "id": "exp_007_2",
+        "name": "Rabicip (Rabeprazole)",
+        "dose": "20 mg",
+        "frequency": "Once daily (OD)",
+        "timing": "Before food",
+        "duration": "5 days"
+      }
+    ],
+    "errorTypes": [
+      "Incorrect timing"
+    ],
+    "reviewDecision": "Ground Truth Corrected",
+    "reviewStatus": "Needs Verification",
+    "evaluationState": "EVALUATED",
+    "notes": "Specimen queued for automated test run."
+  },
+  {
+    "id": "FBL_TEST-006_1788602657745",
+    "timestamp": "2026-09-05T10:04:17.745Z",
+    "testId": "TEST-006",
+    "imageName": "prescription_006_pediatric.jpg",
+    "imageUrl": "/api/testing/cases/TEST-006/image",
+    "imageDifficulty": "Mixed Prescription",
+    "aiExtractedResult": {
+      "medicines": [
+        {
+          "name": "Calpol",
+          "dose": "5ml (120mg/5ml)",
+          "frequency": "TDS",
+          "timing": "after_food",
+          "duration": "3 days",
+          "instructions": "5ml TDS for fever"
+        },
+        {
+          "name": "Nasoclear",
+          "dose": "2 drops",
+          "frequency": "before feeds",
+          "timing": "before_food",
+          "duration": "5 days",
+          "instructions": "2 drops both nostrils before feeds"
+        }
+      ],
+      "doctorName": "Dr. Elena Rostova",
+      "clinicName": "CHILDREN SPECIALTY CLINIC"
+    },
+    "humanCorrectedResult": {
+      "medicines": [
+        {
+          "id": "exp_006_1",
+          "name": "Calpol (Paracetamol)",
+          "dose": "120mg / 5ml (5ml)",
+          "frequency": "Thrice daily (TDS)",
+          "timing": "After food or milk",
+          "duration": "3 days"
+        },
+        {
+          "id": "exp_006_2",
+          "name": "Nasoclear Saline Drops",
+          "dose": "2 drops",
+          "frequency": "Before feeds",
+          "timing": "Before meals",
+          "duration": "5 days"
+        }
+      ],
+      "reviewerNotes": "Pediatric liquid and drop formulations identified accurately."
+    },
+    "groundTruth": [
+      {
+        "id": "exp_006_1",
+        "name": "Calpol (Paracetamol)",
+        "dose": "120mg / 5ml (5ml)",
+        "frequency": "Thrice daily (TDS)",
+        "timing": "After food or milk",
+        "duration": "3 days"
+      },
+      {
+        "id": "exp_006_2",
+        "name": "Nasoclear Saline Drops",
+        "dose": "2 drops",
+        "frequency": "Before feeds",
+        "timing": "Before meals",
+        "duration": "5 days"
+      }
+    ],
+    "errorTypes": [
+      "Dose incorrectly detected"
+    ],
+    "reviewDecision": "Confirmed AI Result",
+    "reviewStatus": "Passed",
+    "evaluationState": "EVALUATED",
+    "notes": "Pediatric liquid and drop formulations identified accurately."
+  },
+  {
+    "id": "FBL_TEST-005_1788602657745",
+    "timestamp": "2026-09-05T10:04:17.745Z",
+    "testId": "TEST-005",
+    "imageName": "prescription_005_blurry.jpg",
+    "imageUrl": "/api/testing/cases/TEST-005/image",
+    "imageDifficulty": "Low Quality / Blurry",
+    "aiExtractedResult": {
+      "medicines": [
+        {
+          "name": "Paracetamol",
+          "dose": "500mg",
+          "frequency": "SOS",
+          "timing": "unspecified",
+          "duration": "As prescribed",
+          "instructions": "Take SOS"
+        }
+      ],
+      "doctorName": "Duty Physician",
+      "clinicName": "CITY EMERGENCY CARE"
+    },
+    "humanCorrectedResult": {
+      "medicines": [
+        {
+          "id": "exp_005_1",
+          "name": "Paracetamol",
+          "dose": "500 mg",
+          "frequency": "SOS (as needed)",
+          "timing": "With food",
+          "duration": "2 days"
+        },
+        {
+          "id": "exp_005_2",
+          "name": "Ibuprofen",
+          "dose": "400 mg",
+          "frequency": "Twice daily",
+          "timing": "Strictly after food",
+          "duration": "3 days"
+        }
+      ],
+      "reviewerNotes": "Ibuprofen line was cropped or blurred out of focus in the specimen photo. Missed second medication."
+    },
+    "groundTruth": [
+      {
+        "id": "exp_005_1",
+        "name": "Paracetamol",
+        "dose": "500 mg",
+        "frequency": "SOS (as needed)",
+        "timing": "With food",
+        "duration": "2 days"
+      },
+      {
+        "id": "exp_005_2",
+        "name": "Ibuprofen",
+        "dose": "400 mg",
+        "frequency": "Twice daily",
+        "timing": "Strictly after food",
+        "duration": "3 days"
+      }
+    ],
+    "errorTypes": [
+      "Timing missing",
+      "Missing medicines"
+    ],
+    "reviewDecision": "Marked AI Result Incorrect",
+    "reviewStatus": "Failed",
+    "evaluationState": "EVALUATED",
+    "notes": "Ibuprofen line was cropped or blurred out of focus in the specimen photo. Missed second medication."
+  },
+  {
+    "id": "FBL_TEST-004_1788602657744",
+    "timestamp": "2026-09-05T10:04:17.744Z",
+    "testId": "TEST-004",
+    "imageName": "prescription_004_difficult.jpg",
+    "imageUrl": "/api/testing/cases/TEST-004/image",
+    "imageDifficulty": "Difficult Handwritten",
+    "aiExtractedResult": {
+      "medicines": [
+        {
+          "name": "Azithral",
+          "dose": "500mg",
+          "frequency": "OD",
+          "timing": "unclear",
+          "duration": "3 days",
+          "instructions": "1 tab OD for 3 days"
+        },
+        {
+          "name": "Ascoril-D",
+          "dose": "10ml",
+          "frequency": "TDS",
+          "timing": "unclear",
+          "duration": "5 days",
+          "instructions": "10ml TDS"
+        }
+      ],
+      "doctorName": "Dr. S. Nair",
+      "clinicName": "ST. JUDE HEALTH CENTER"
+    },
+    "humanCorrectedResult": {
+      "medicines": [
+        {
+          "id": "exp_004_1",
+          "name": "Azithral (Azithromycin)",
+          "dose": "500 mg",
+          "frequency": "Once daily (OD)",
+          "timing": "After food",
+          "duration": "3 days"
+        },
+        {
+          "id": "exp_004_2",
+          "name": "Ascoril-D Cough Syrup",
+          "dose": "10 ml",
+          "frequency": "Thrice daily (TDS)",
+          "timing": "After meals",
+          "duration": "5 days"
+        }
+      ],
+      "reviewerNotes": "Cough syrup timing relative to meals was not explicitly stated by prescriber; flagged for pharmacist verification."
+    },
+    "groundTruth": [
+      {
+        "id": "exp_004_1",
+        "name": "Azithral (Azithromycin)",
+        "dose": "500 mg",
+        "frequency": "Once daily (OD)",
+        "timing": "After food",
+        "duration": "3 days"
+      },
+      {
+        "id": "exp_004_2",
+        "name": "Ascoril-D Cough Syrup",
+        "dose": "10 ml",
+        "frequency": "Thrice daily (TDS)",
+        "timing": "After meals",
+        "duration": "5 days"
+      }
+    ],
+    "errorTypes": [
+      "Timing missing"
+    ],
+    "reviewDecision": "Ground Truth Corrected",
+    "reviewStatus": "Needs Verification",
+    "evaluationState": "EVALUATED",
+    "notes": "Cough syrup timing relative to meals was not explicitly stated by prescriber; flagged for pharmacist verification."
+  },
+  {
+    "id": "FBL_TEST-003_1788602657744",
+    "timestamp": "2026-09-05T10:04:17.744Z",
+    "testId": "TEST-003",
+    "imageName": "prescription_003_medium.jpg",
+    "imageUrl": "/api/testing/cases/TEST-003/image",
+    "imageDifficulty": "Medium Handwritten",
+    "aiExtractedResult": {
+      "medicines": [
+        {
+          "name": "Pantocid",
+          "dose": "Standard dose",
+          "frequency": "OD",
+          "timing": "before_food",
+          "duration": "7 days",
+          "instructions": "1 tab OD before breakfast"
+        },
+        {
+          "name": "Levocet",
+          "dose": "5mg",
+          "frequency": "HS",
+          "timing": "bedtime",
+          "duration": "5 days",
+          "instructions": "1 tab HS"
+        }
+      ],
+      "doctorName": "Dr. A. K. Verma",
+      "clinicName": "APOLLO CLINIC"
+    },
+    "humanCorrectedResult": {
+      "medicines": [
+        {
+          "id": "exp_003_1",
+          "name": "Pantocid (Pantoprazole)",
+          "dose": "40 mg",
+          "frequency": "Once daily (OD)",
+          "timing": "Before breakfast",
+          "duration": "7 days"
+        },
+        {
+          "id": "exp_003_2",
+          "name": "Levocet (Levocetirizine)",
+          "dose": "5 mg",
+          "frequency": "Once daily at night (HS)",
+          "timing": "Bedtime",
+          "duration": "5 days"
+        }
+      ],
+      "reviewerNotes": "Pantocid strength was omitted in doctor handwritten line (wrote just \"Tab Pantocid\"), resulting in Dose accuracy drop."
+    },
+    "groundTruth": [
+      {
+        "id": "exp_003_1",
+        "name": "Pantocid (Pantoprazole)",
+        "dose": "40 mg",
+        "frequency": "Once daily (OD)",
+        "timing": "Before breakfast",
+        "duration": "7 days"
+      },
+      {
+        "id": "exp_003_2",
+        "name": "Levocet (Levocetirizine)",
+        "dose": "5 mg",
+        "frequency": "Once daily at night (HS)",
+        "timing": "Bedtime",
+        "duration": "5 days"
+      }
+    ],
+    "errorTypes": [
+      "Incorrect frequency"
+    ],
+    "reviewDecision": "Ground Truth Corrected",
+    "reviewStatus": "Partially Correct",
+    "evaluationState": "EVALUATED",
+    "notes": "Pantocid strength was omitted in doctor handwritten line (wrote just \"Tab Pantocid\"), resulting in Dose accuracy drop."
+  },
+  {
+    "id": "FBL_TEST-002_1788602657744",
+    "timestamp": "2026-09-05T10:04:17.744Z",
+    "testId": "TEST-002",
+    "imageName": "prescription_002_handwritten.jpg",
+    "imageUrl": "/api/testing/cases/TEST-002/image",
+    "imageDifficulty": "Clear Handwritten",
+    "aiExtractedResult": {
+      "medicines": [
+        {
+          "name": "Metformin",
+          "dose": "500mg",
+          "frequency": "1-0-1",
+          "timing": "with_food",
+          "duration": "30 days",
+          "instructions": "1 tab twice daily with meals"
+        },
+        {
+          "name": "Telmisartan",
+          "dose": "40mg",
+          "frequency": "1-0-0",
+          "timing": "morning",
+          "duration": "30 days",
+          "instructions": "1 tab morning"
+        },
+        {
+          "name": "Atorvastatin",
+          "dose": "20mg",
+          "frequency": "0-0-1",
+          "timing": "bedtime",
+          "duration": "30 days",
+          "instructions": "1 tab at bedtime"
+        }
+      ],
+      "doctorName": "Dr. Priya Sharma, MD",
+      "clinicName": "CITY HEART & DIABETES CARE"
+    },
+    "humanCorrectedResult": {
+      "medicines": [
+        {
+          "id": "exp_002_1",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "frequency": "Twice daily (1-0-1)",
+          "timing": "With meals",
+          "duration": "30 days"
+        },
+        {
+          "id": "exp_002_2",
+          "name": "Telmisartan",
+          "dose": "40 mg",
+          "frequency": "Once daily (1-0-0)",
+          "timing": "Morning",
+          "duration": "30 days"
+        },
+        {
+          "id": "exp_002_3",
+          "name": "Atorvastatin",
+          "dose": "20 mg",
+          "frequency": "Bedtime (0-0-1)",
+          "timing": "Night",
+          "duration": "30 days"
+        }
+      ],
+      "reviewerNotes": "Clear cursive handwriting with standard abbreviation notation. Excellent match."
+    },
+    "groundTruth": [
+      {
+        "id": "exp_002_1",
+        "name": "Metformin",
+        "dose": "500 mg",
+        "frequency": "Twice daily (1-0-1)",
+        "timing": "With meals",
+        "duration": "30 days"
+      },
+      {
+        "id": "exp_002_2",
+        "name": "Telmisartan",
+        "dose": "40 mg",
+        "frequency": "Once daily (1-0-0)",
+        "timing": "Morning",
+        "duration": "30 days"
+      },
+      {
+        "id": "exp_002_3",
+        "name": "Atorvastatin",
+        "dose": "20 mg",
+        "frequency": "Bedtime (0-0-1)",
+        "timing": "Night",
+        "duration": "30 days"
+      }
+    ],
+    "errorTypes": [
+      "Incorrect timing"
+    ],
+    "reviewDecision": "Confirmed AI Result",
+    "reviewStatus": "Passed",
+    "evaluationState": "EVALUATED",
+    "notes": "Clear cursive handwriting with standard abbreviation notation. Excellent match."
+  },
+  {
+    "id": "FBL_TEST-001_1788602657743",
+    "timestamp": "2026-09-05T10:04:17.743Z",
+    "testId": "TEST-001",
+    "imageName": "prescription_001_printed.jpg",
+    "imageUrl": "/api/testing/cases/TEST-001/image",
+    "imageDifficulty": "Clear Printed",
+    "aiExtractedResult": {
+      "medicines": [
+        {
+          "name": "Augmentin",
+          "dose": "625mg",
+          "frequency": "1-0-1",
+          "timing": "after_food",
+          "duration": "5 days",
+          "instructions": "1 tablet twice daily after food"
+        },
+        {
+          "name": "Dolo",
+          "dose": "650mg",
+          "frequency": "1-1-1",
+          "timing": "after_food",
+          "duration": "3 days",
+          "instructions": "1 tablet thrice daily after food"
+        },
+        {
+          "name": "Pantocid",
+          "dose": "40mg",
+          "frequency": "1-0-0",
+          "timing": "before_food",
+          "duration": "5 days",
+          "instructions": "1 capsule once daily before breakfast"
+        }
+      ],
+      "doctorName": "Dr. Robert Chen, MD",
+      "clinicName": "METRO GENERAL HOSPITAL"
+    },
+    "humanCorrectedResult": {
+      "medicines": [
+        {
+          "id": "exp_001_1",
+          "name": "Augmentin (Amoxicillin & Clavulanate)",
+          "dose": "625 mg",
+          "frequency": "Twice daily (1-0-1)",
+          "timing": "After food",
+          "duration": "5 days",
+          "instructions": "Take after meals"
+        },
+        {
+          "id": "exp_001_2",
+          "name": "Dolo (Paracetamol)",
+          "dose": "650 mg",
+          "frequency": "Thrice daily (1-1-1)",
+          "timing": "After food",
+          "duration": "3 days",
+          "instructions": "Take for fever/pain"
+        },
+        {
+          "id": "exp_001_3",
+          "name": "Pantocid (Pantoprazole)",
+          "dose": "40 mg",
+          "frequency": "Once daily (1-0-0)",
+          "timing": "Before breakfast",
+          "duration": "5 days",
+          "instructions": "Take on empty stomach"
+        }
+      ],
+      "reviewerNotes": "Clean laser-printed specimen. All 3 medications, dosages, and timings identified with 100% precision."
+    },
+    "groundTruth": [
+      {
+        "id": "exp_001_1",
+        "name": "Augmentin (Amoxicillin & Clavulanate)",
+        "dose": "625 mg",
+        "frequency": "Twice daily (1-0-1)",
+        "timing": "After food",
+        "duration": "5 days",
+        "instructions": "Take after meals"
+      },
+      {
+        "id": "exp_001_2",
+        "name": "Dolo (Paracetamol)",
+        "dose": "650 mg",
+        "frequency": "Thrice daily (1-1-1)",
+        "timing": "After food",
+        "duration": "3 days",
+        "instructions": "Take for fever/pain"
+      },
+      {
+        "id": "exp_001_3",
+        "name": "Pantocid (Pantoprazole)",
+        "dose": "40 mg",
+        "frequency": "Once daily (1-0-0)",
+        "timing": "Before breakfast",
+        "duration": "5 days",
+        "instructions": "Take on empty stomach"
+      }
+    ],
+    "errorTypes": [],
+    "reviewDecision": "Confirmed AI Result",
+    "reviewStatus": "Passed",
+    "evaluationState": "EVALUATED",
+    "notes": "Clean laser-printed specimen. All 3 medications, dosages, and timings identified with 100% precision."
+  }
+]

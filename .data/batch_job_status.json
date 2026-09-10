@@ -1,0 +1,23 @@
+{
+  "jobId": "job_1788682057887",
+  "isRunning": true,
+  "isPaused": false,
+  "startedAt": "2026-09-06T08:07:37.887Z",
+  "finishedAt": null,
+  "totalInBatch": 192,
+  "totalTestCases": 209,
+  "currentNumber": 143,
+  "completedCount": 143,
+  "remainingCount": 49,
+  "errorCount": 0,
+  "passedAiVerifiedCount": 0,
+  "passedBenchmarkVerifiedCount": 11,
+  "needsVerificationCount": 1,
+  "noMedicineDetectedCount": 3,
+  "currentProcessingIds": [
+    "TEST-064",
+    "TEST-063"
+  ],
+  "currentImageName": "54.jpeg",
+  "errors": []
+}
