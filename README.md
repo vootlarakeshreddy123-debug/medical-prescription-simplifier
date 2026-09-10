@@ -106,7 +106,7 @@ npm run dev
 
 🌍Live Demo
 
- medical-prescription-simplifier.vercel.app
+https://medical-prescription-simplifier.vercel.app/
 
 GitHub Repository
 
