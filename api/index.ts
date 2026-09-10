@@ -9,16 +9,16 @@ export default async function handler(req: Request, res: Response) {
   try {
     await appReady;
 
-    // Make sure Express receives the original Vercel API path.
-    if (req.url && !req.url.startsWith('/api/')) {
-      req.url = `/api${req.url.startsWith('/') ? '' : '/'}${req.url}`;
-    }
-
-    console.log('[Vercel API]', req.method, req.url);
+    console.log(
+      '[Vercel API]',
+      req.method,
+      req.url,
+      req.originalUrl
+    );
 
     return app(req, res);
   } catch (error) {
-    console.error('[Vercel API] Initialization error:', error);
+    console.error('[Vercel API] Error:', error);
 
     if (!res.headersSent) {
       return res.status(500).json({
